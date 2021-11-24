@@ -1,7 +1,10 @@
 :root {
-  --background: #f0f2f5;
+  --background: #212121;
+  --background-container: #282828;
+  --background-container-highlight: #323232;
 
-  --grey: #969cb3;
+  --black: #000000;
+  --grey: #aaaaaa;
   --white: #ffffff;
 }
 
