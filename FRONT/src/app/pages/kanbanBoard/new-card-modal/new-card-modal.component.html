@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Create a new Kanban card</h2>
+<mat-dialog-content class="mat-typography">
+  <p>Content</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button
+    mat-flat-button
+    [mat-dialog-close]="true"
+    cdkFocusInitial
+    color="accent"
+  >
+    Create
+  </button>
+</mat-dialog-actions>
