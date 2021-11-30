@@ -15,4 +15,8 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/board']);
     }
   }
+
+  login(): void {
+    this.router.navigate(['/board']);
+  }
 }

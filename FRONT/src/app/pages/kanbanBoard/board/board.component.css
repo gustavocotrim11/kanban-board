@@ -30,18 +30,3 @@
 .board-coloumn-title {
   align-self: center;
 }
-
-mat-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-mat-card-title {
-  margin: 0;
-}
-
-mat-card-actions {
-  display: flex;
-  justify-content: space-between;
-}

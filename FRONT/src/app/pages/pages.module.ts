@@ -11,6 +11,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { CoreModule } from '../core/core.module';
 import { CardComponent } from './kanbanBoard/card/card.component';
 import { NewCardModalComponent } from './kanbanBoard/new-card-modal/new-card-modal.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,15 @@ import { NewCardModalComponent } from './kanbanBoard/new-card-modal/new-card-mod
     HomeComponent,
     CardComponent,
     NewCardModalComponent,
+    ErrorPageComponent,
   ],
   imports: [MaterialModule, AppRoutingModule, FormsModule, CoreModule],
-  exports: [LoginComponent, NavbarComponent, BoardComponent, HomeComponent],
+  exports: [
+    LoginComponent,
+    NavbarComponent,
+    BoardComponent,
+    HomeComponent,
+    ErrorPageComponent,
+  ],
 })
 export class PagesModule {}

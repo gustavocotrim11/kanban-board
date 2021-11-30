@@ -7,8 +7,14 @@
   align-items: center;
 }
 
+.nav-logo {
+  display: flex;
+}
+
 .nav-bar-container-elements {
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  text-decoration: none;
 }
