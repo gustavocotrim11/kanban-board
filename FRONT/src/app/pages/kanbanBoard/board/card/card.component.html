@@ -1,0 +1,75 @@
+<mat-card *ngIf="!isEditMode; else editMode">
+  <mat-card-header>
+    <mat-card-title>{{ card.titulo }}</mat-card-title>
+    <button mat-icon-button (click)="openEditMode()" aria-label="Edit">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </mat-card-header>
+  <mat-card-content>{{ card.conteudo }}</mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-icon-button
+      [disabled]="board === 'ToDo' ? true : false"
+      (click)="setCardToBeforeBoard()"
+      aria-label="Before"
+    >
+      <mat-icon *ngIf="board !== 'ToDo'; else iconBlock">
+        navigate_before
+      </mat-icon>
+    </button>
+    <button mat-icon-button (click)="deleteCard()" aria-label="Delete">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      [disabled]="board === 'Done' ? true : false"
+      (click)="setCardToNextBoard()"
+      aria-label="Next"
+    >
+      <mat-icon *ngIf="board !== 'Done'; else iconBlock">
+        navigate_next
+      </mat-icon>
+    </button>
+  </mat-card-actions>
+  <mat-card-footer>
+    <mat-progress-bar
+      mode="determinate"
+      [value]="valueProgress"
+    ></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>
+
+<ng-template #editMode>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Editing...</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="card-form" [formGroup]="cardForm">
+        <mat-form-field class="card-form-full">
+          <mat-label>Título</mat-label>
+          <input matInput formControlName="titulo" name="titulo" />
+        </mat-form-field>
+        <mat-form-field class="card-form-full">
+          <mat-label>Conteúdo</mat-label>
+          <textarea
+            matInput
+            formControlName="conteudo"
+            name="conteudo"
+          ></textarea>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button mat-dialog-close (click)="cancel()">Cancel</button>
+      <button mat-flat-button color="accent" (click)="editCard()">Save</button>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-progress-bar mode="determinate" value="33"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</ng-template>
+
+<ng-template #iconBlock>
+  <mat-icon>block</mat-icon>
+</ng-template>

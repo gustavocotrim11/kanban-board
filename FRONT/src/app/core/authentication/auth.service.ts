@@ -1,14 +1,29 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Login } from 'src/app/shared/models/login.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  token = false; //window.localStorage.getItem('token');
+  constructor(private http: HttpClient) {}
 
-  constructor() {}
+  login(loginData: Login): Observable<string> {
+    const kanbanAuthenticationUrl = 'http://localhost:5000/login/';
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+    const body = loginData;
+
+    return this.http.post<string>(kanbanAuthenticationUrl, body, {
+      headers: headers,
+    });
+  }
 
   isAuthenticated() {
-    return this.token ? true : false;
+    const token = window.localStorage.getItem('token');
+
+    return token ? true : false;
   }
 }

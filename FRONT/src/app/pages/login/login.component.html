@@ -1,13 +1,37 @@
 <div class="login-container">
   <mat-card>
     <mat-card-header>
-      <img src="../../../assets/images/kanbanLogo.png" alt="Kanban Logo" />
-      <mat-card-title> Kanban Board </mat-card-title>
+      <mat-card-title>
+        <img src="../../../assets/images/kanbanLogo.png" alt="Kanban Logo" />
+        Kanban Board
+      </mat-card-title>
     </mat-card-header>
-    <mat-card-content
-      >Kanban Board is a collaborative activity development app that makes it
-      easy and enjoyable to plan and visualize your work.</mat-card-content
-    >
+    <mat-card-content>
+      <form class="card-form" [formGroup]="loginForm">
+        <mat-form-field class="card-form-full">
+          <mat-label>Login</mat-label>
+          <input matInput formControlName="login" name="login" />
+        </mat-form-field>
+        <mat-form-field class="card-form-full">
+          <mat-label>Senha</mat-label>
+          <input
+            matInput
+            formControlName="senha"
+            name="senha"
+            [type]="hide ? 'password' : 'text'"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
     <mat-card-actions>
       <button
         color="primary"

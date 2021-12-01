@@ -35,3 +35,11 @@ html,
 body {
   height: 100%;
 }
+
+.green-snackbar {
+  background: rgb(65, 252, 134);
+}
+
+.red-snackbar {
+  background: #f44336;
+}

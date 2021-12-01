@@ -7,6 +7,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const Material = [
   MatToolbarModule,
@@ -16,6 +18,8 @@ const Material = [
   MatProgressBarModule,
   MatDialogModule,
   MatFormFieldModule,
+  MatInputModule,
+  MatSnackBarModule,
 ];
 
 @NgModule({
