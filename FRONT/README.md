@@ -1,27 +1,57 @@
-# FRONT
+<h1 align="center">Kanban Board</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.0.
+<p align="center">
+  Santander Coders - Let's Code
+</p>
 
-## Development server
+<p align="center">
+  Projeto final do módulo de Angular do programa de formação Santander Coders - Let's Code, trata-se de uma aplicação front-end web de um quadro kanban, desenvolvida em Angular, utilizando o Angular CLI, TypeScript e Angular Material.
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## ✨ Tecnologias
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-## Build
+- [Angular](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [AngularMaterial](https://material.angular.io/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🚀 Como executar
 
-## Running unit tests
+Clone o projeto e acesse sua pasta.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+$ git clone https://github.com/gustavocotrim11/kanban-board
+$ cd kanban-board
+```
 
-## Running end-to-end tests
+> Obs.: Para executar esse projeto temos temos que executar a API de exemplo disponibilizada pasta BACK.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para iniciar o Back-end, use os comandos:
+```bash
+# Para acessar a pasta
+$ cd BACK
+# Para instalar as dependências
+$ npm install
+# Para iniciar a API
+$ npm run server
+```
 
-## Further help
+A API responderá em [`localhost:5000`](http://localhost:5000).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para iniciar o Front-end, use os comandos:
+```bash
+# Para acessar a pasta
+$ cd FRONT
+# Para instalar as dependências
+$ npm install
+# Para iniciar o projeto
+$ ng serve
+```
+
+A aplicação pode ser acessada em [`localhost:4200`](http://localhost:4200).
+
+## 💻 Projeto
+
+Kanban Board é um app direcionado para realizar o controle de suas atividades através de um quadro de sinalização do sistema Kanban.
