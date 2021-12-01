@@ -26,7 +26,7 @@ $ git clone https://github.com/gustavocotrim11/kanban-board
 $ cd kanban-board
 ```
 
-> Obs.: Para executar esse projeto temos temos que executar a API de exemplo disponibilizada pasta BACK.
+> Obs.: Para executar esse projeto temos temos que executar a API de exemplo disponibilizada na pasta BACK.
 
 Para iniciar o Back-end, use os comandos:
 ```bash
@@ -54,4 +54,4 @@ A aplicação pode ser acessada em [`localhost:4200`](http://localhost:4200).
 
 ## 💻 Projeto
 
-Kanban Board é um app direcionado para realizar o controle de suas atividades através de um quadro de sinalização do sistema Kanban.
+Kanban Board é um app direcionado para realizar o controle de suas atividades através de um quadro de sinalização baseado no sistema Kanban.
