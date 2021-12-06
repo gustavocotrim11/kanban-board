@@ -1,0 +1,20 @@
+.nav-bar {
+  padding: 0 5rem;
+  background-color: var(--background-container-highlight);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+}
+
+.nav-bar-container-elements {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  text-decoration: none;
+}

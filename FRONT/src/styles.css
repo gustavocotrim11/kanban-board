@@ -1,0 +1,45 @@
+:root {
+  --background: #212121;
+  --background-container: #282828;
+  --background-container-highlight: #323232;
+
+  --black: #000000;
+  --grey: #aaaaaa;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: var(--white);
+}
+
+html {
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+
+  @media (max-width: 720px) {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.green-snackbar {
+  background: rgb(65, 252, 134);
+}
+
+.red-snackbar {
+  background: #f44336;
+}

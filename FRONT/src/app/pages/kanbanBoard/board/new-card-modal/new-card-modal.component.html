@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Create a new Kanban card</h1>
+<mat-dialog-content class="mat-typography">
+  <form class="card-form" [formGroup]="cardForm">
+    <mat-form-field class="card-form-full">
+      <mat-label>Título</mat-label>
+      <input matInput formControlName="titulo" name="titulo" />
+    </mat-form-field>
+    <mat-form-field class="card-form-full">
+      <mat-label>Conteúdo</mat-label>
+      <textarea matInput formControlName="conteudo" name="conteudo"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close (click)="cancel()">Cancel</button>
+  <button mat-flat-button color="accent" (click)="createCard()">Create</button>
+</mat-dialog-actions>
