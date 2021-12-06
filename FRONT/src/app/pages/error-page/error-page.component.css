@@ -1,0 +1,20 @@
+.errorPage-container {
+  width: 100%;
+  padding: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+@media screen and (max-width: 569px) {
+  img {
+    display: none;
+  }
+}
